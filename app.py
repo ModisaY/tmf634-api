@@ -177,5 +177,9 @@ def delete_resource_spec(spec_id):
         abort(404)
     return "", 204
 
+@app.route("/", methods=["GET"])
+def home():
+    return "TMF634 API is running!"
+
 if __name__ == "__main__":
     app.run(port=5000)
