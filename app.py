@@ -6,6 +6,10 @@ import os
 
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return "TMF634 API is running!"
+
 app.config["MONGO_URI"] = "mongodb+srv://tmf634:Tmf634_Modisa@tm-forum.7n7clfv.mongodb.net/tmf634?retryWrites=true&w=majority&appName=TM-Forum"
 mongo = PyMongo(app)
 
